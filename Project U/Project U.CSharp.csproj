@@ -76,6 +76,8 @@
   <ItemGroup>
     <Compile Include="Assets\Resoruces\Scripts\Objects\BasePlane.cs" />
     <Compile Include="Assets\Resoruces\Scripts\Objects\PlayerPlane.cs" />
+    <Compile Include="Assets\Resoruces\Scripts\UI\JoyPad\AttackJoyPad.cs" />
+    <Compile Include="Assets\Resoruces\Scripts\UI\JoyPad\MoveJoyPad.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
