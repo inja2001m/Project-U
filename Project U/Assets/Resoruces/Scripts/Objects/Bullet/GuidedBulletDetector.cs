@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class GuidedBulletDetector : MonoBehaviour
 {
-    public GameObject m_Target;
+    private GameObject target;
+    public GameObject m_Target
+    {
+        get
+        {
+            return this.target;
+        }
+    }
 
-    private bool m_IsFirst;
+    public bool isFind;
 
     void Start()
     {
-        m_IsFirst = true;
+        isFind = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.tag == "Enermy")
         {
-            m_Target = other.gameObject;
-            Destroy(this);
+            isFind = true;
+            target = other.gameObject;
         }
     }
 }
